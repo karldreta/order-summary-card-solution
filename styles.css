@@ -1,6 +1,5 @@
 html, body {
     box-sizing: border-box;
-    /* font-size: 62.5%; */
     width: 100vw;
     height: 100vh;
     margin: 0px;
@@ -16,7 +15,6 @@ html, body {
 
 #main-card {
     width: 450px;
-    /* height: 600px; */
     border-radius: 20px;
     overflow: hidden; /*Hides the top corners of the banner inside the border-radius*/
     background-color: white;
@@ -159,29 +157,3 @@ article .payment {
 
 .attribution { font-size: 11px; text-align:center; margin-top: 10px;  }
 .attribution a { color: hsl(228, 45%, 44%); }
-
-/* Begin Media design */
-
-@media (max-width: 375px) {
-    #main-card {
-        width: 100%;
-    }
-
-    article .summary > h1 {
-        font-size: 22px;
-    }
-
-    article .yearly-plan .text1  {
-        
-    }
-
-    article .left-side,
-    article .right-side {
-        width: 100%;
-    }
-
-    article .payment button {
-        width: 100%;
-    }
-}
-
