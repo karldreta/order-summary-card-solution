@@ -3,7 +3,6 @@ html, body {
     /* font-size: 62.5%; */
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -11,6 +10,8 @@ html, body {
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url('imgs/pattern-background-desktop.svg');
+    background-size: cover;
 }
 
 #main-card {
@@ -18,23 +19,24 @@ html, body {
     /* height: 600px; */
     border-radius: 20px;
     overflow: hidden; /*Hides the top corners of the banner inside the border-radius*/
+    background-color: white;
 }
 
 .banner {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 article .summary {
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 article .summary > h1 {
-    /* border: 1px solid black; */
+
     margin: 0 0 20px 0; /* Adds Bottom margin */
     font-size: 26px;
     color: hsl(223, 47%, 23%);
@@ -42,36 +44,144 @@ article .summary > h1 {
 }
 
 article .summary > p {
-    /* border: 1px solid black; */
+
     padding: 0 50px 0 50px; /* For text to squeeze to three lines */
     margin: 0;
     line-height: 1.6;
     color: hsl(224, 23%, 55%);
 }
 
+/* Begin Yearly-Plan Section */
+
+article .yearly-plan {
+    display: flex;
+    justify-content: space-between; /* I wrapped 2 divs inside. This aligns the divs to each end,leaving space between them */
+    width: 340px;
+    margin: auto; /* This will center the yearly-plan after reducing the width */
+    margin-bottom: 40px;
+    padding: 10px 0px;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+
+}
+
+article .left-side {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article .left-side > img {
+    margin: 0px 10px 0px 15px;
+}
+
+article .left-side > .annual-plan > p {
+    /* This targets only the <p>, and giving it a margin to remove some line spacing */
+    margin: 10px;
+}
+
+article .left-side > .annual-plan > .text1 {
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
+}
+
+article .text2 {
+    color: hsl(224, 23%, 55%);
+}
+
+/* Begin Right side */
+
+article .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article .right-side p /* Change */{
+    margin-right: 25px;
+    color: hsl(245, 75%, 52%);
+}
+
+article .right-side a:hover {
+    /* Hover stats: could be a link somewhere, but for the purpose of this, we just let it be. */
+    text-decoration: none;
+    color: hsl(245, 75%, 62%);
+}
+
+article .right-side a:visited {
+    color: hsl(245, 75%, 52%)
+}
+
+/* Begin Payment Section */
+
+article .payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
 
 
 
 
+.payment button {
+    width: 340px;
+    padding: 15px 0px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    color: whitesmoke;
+    background-color: hsl(245, 75%, 52%);
+    border: 0px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 20px hsl(245, 75%, 72%, 0.3);
+}
+
+.payment button:hover {
+    background-color: hsl(245, 75%, 62%);
+}
 
 
+.payment .cancel /* Cancel Order */{
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(224, 23%, 55%);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.payment .cancel:hover {
+    color: hsl(224, 23%, 25%)
+}
 
 /* Footer */
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align:center; margin-top: 10px;  }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* Begin Media design */
+
+@media (max-width: 375px) {
+    #main-card {
+        width: 100%;
+    }
+
+    article .summary > h1 {
+        font-size: 22px;
+    }
+
+    article .yearly-plan .text1  {
+        
+    }
+
+    article .left-side,
+    article .right-side {
+        width: 100%;
+    }
+
+    article .payment button {
+        width: 100%;
+    }
+}
+
